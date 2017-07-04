@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import {BudgetBar} from "../../../components"
+import {BudgetBar} from "./budget-bar"
 
 const Home = ({budget, love}) => {
   return (
