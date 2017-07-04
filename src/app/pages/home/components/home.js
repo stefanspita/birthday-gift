@@ -1,21 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
 import {BudgetBar} from "./budget-bar"
+import {GiftList} from "./gift-list"
 
-const Home = ({budget, love}) => {
+const Home = ({budget, love, giftCategories}) => {
   return (
-    <BudgetBar
-      peopleOverload={budget.peopleOverload}
-      energy={budget.energy}
-      money={budget.money}
-      love={love}
-    />
+    <div>
+      <BudgetBar
+        peopleOverload={budget.peopleOverload}
+        energy={budget.energy}
+        money={budget.money}
+        love={love}
+      />
+      <GiftList
+        giftCategories = {giftCategories}
+      />
+    </div>
   )
 }
 
 Home.propTypes = {
   budget: PropTypes.object.isRequired,
   love: PropTypes.number.isRequired,
+  giftCategories: PropTypes.array.isRequired,
 }
 
 export default Home
