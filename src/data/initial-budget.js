@@ -1,5 +1,5 @@
 export default {
   love: 1000,
   energy: 100,
-  money: 1000,
+  money: 500,
 }

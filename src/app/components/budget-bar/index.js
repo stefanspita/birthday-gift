@@ -4,7 +4,7 @@ import PropTypes from "prop-types"
 export function BudgetBar({love, energy, money}) {
   return (
     <div>
-      Love: {love} Energy: {energy} Money: {money}
+      Love: {love} Energy: {energy} Money: &pound;{money}
     </div>
   )
 }
