@@ -14,7 +14,8 @@ import serve from "rollup-plugin-serve"
 import simplevars from "postcss-simple-vars"
 import nested from "postcss-nested"
 import cssnext from "postcss-cssnext"
-import cssnano from "cssnano"
+import postcssModules from "postcss-modules"
+const cssExportMap = {}
 
 export default {
   entry: "src/main.js",
@@ -27,9 +28,16 @@ export default {
       plugins: [
         simplevars(),
         nested(),
-        cssnext({warnForDuplicates: false}),
-        cssnano(),
+        cssnext(),
+        postcssModules({
+          getJSON (id, exportTokens) {
+            cssExportMap[id] = exportTokens
+          },
+        }),
       ],
+      getExport (id) {
+        return cssExportMap[id]
+      },
     }),
     commonjs({
       include: ["node_modules/**"],

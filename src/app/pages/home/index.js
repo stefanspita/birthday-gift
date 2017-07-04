@@ -7,6 +7,7 @@ const selector = (state) => {
   return {
     buttonClicked: state.home.buttonClicked,
     budget: state.home.budget,
+    love: state.home.love,
   }
 }
 
