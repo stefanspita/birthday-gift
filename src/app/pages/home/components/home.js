@@ -1,21 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {BudgetBar} from "../../../components"
 
-const Home = ({buttonClicked, onButtonClick}) => {
-  const buttonState = buttonClicked ? "clicked" : "not clicked"
+const Home = ({budget}) => {
   return (
-    <div>
-      The button is {buttonState}
-      <br />
-      <button onClick={() => onButtonClick("button-id")}>
-        The button</button>
-    </div>
+    <BudgetBar
+      love={budget.love}
+      energy={budget.energy}
+      money={budget.money}
+    />
   )
 }
 
 Home.propTypes = {
-  buttonClicked: PropTypes.bool.isRequired,
-  onButtonClick: PropTypes.func.isRequired,
+  budget: PropTypes.object.isRequired,
 }
 
 export default Home
