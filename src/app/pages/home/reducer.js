@@ -1,8 +1,10 @@
 import R from "ramda"
+import initialBudget from "../../../data/initial-budget"
 import consts from "../../../constants"
 
 const initialState = {
   buttonClicked: false,
+  budget: initialBudget,
 }
 
 export default function click(state = initialState, action) {

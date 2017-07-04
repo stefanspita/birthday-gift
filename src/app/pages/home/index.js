@@ -6,6 +6,7 @@ import Home from "./components/home"
 const selector = (state) => {
   return {
     buttonClicked: state.home.buttonClicked,
+    budget: state.home.budget,
   }
 }
 
