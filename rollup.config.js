@@ -61,7 +61,7 @@ export default {
     }),
     eslint({
       exclude: [
-        "src/main.css",
+        "src/**/*.css",
       ],
     }),
     babel({
