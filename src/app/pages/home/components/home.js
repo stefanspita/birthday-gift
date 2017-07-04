@@ -5,7 +5,7 @@ import {BudgetBar} from "../../../components"
 const Home = ({budget}) => {
   return (
     <BudgetBar
-      love={budget.love}
+      peopleOverload={budget.peopleOverload}
       energy={budget.energy}
       money={budget.money}
     />
