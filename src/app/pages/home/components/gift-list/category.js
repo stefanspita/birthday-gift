@@ -3,9 +3,9 @@ import PropTypes from "prop-types"
 import R from "ramda"
 import {Gift} from "./gift"
 
-function renderGift(props, index) {
+function renderGift(props) {
   return (<Gift
-    key={index}
+    key={props.id}
     {...props}
   />)
 }
@@ -14,7 +14,7 @@ export function GiftCategory({category, gifts}) {
   return (
     <div>
       <label>{category}</label>
-      {R.addIndex(R.map)(renderGift, gifts)}
+      {R.map(renderGift, gifts)}
     </div>
   )
 }
@@ -22,4 +22,7 @@ export function GiftCategory({category, gifts}) {
 GiftCategory.propTypes = {
   category: PropTypes.string.isRequired,
   gifts: PropTypes.array.isRequired,
+}
+renderGift.propTypes = {
+  id: PropTypes.number.isRequired,
 }
