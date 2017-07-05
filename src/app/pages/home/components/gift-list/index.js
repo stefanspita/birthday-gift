@@ -3,11 +3,10 @@ import R from "ramda"
 import PropTypes from "prop-types"
 import {GiftCategory} from "./category"
 
-function renderGiftCategory({category, gifts}, index) {
+function renderGiftCategory(props, index) {
   return (<GiftCategory
-    index={index}
-    category={category}
-    gifts={gifts}
+    key={index}
+    {...props}
   />)
 }
 
