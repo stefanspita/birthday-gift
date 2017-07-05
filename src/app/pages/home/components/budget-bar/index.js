@@ -5,7 +5,7 @@ import styles from "./budget-bar.css"
 export function BudgetBar({peopleOverload, energy, money, love}) {
   return (
     <div className={styles.wrapper}>
-      <span>Crowds hatred: {peopleOverload} Energy: {energy} Money: &pound;{money}</span>
+      <span>Crowd tolerance: {peopleOverload} Energy: {energy} Money: &pound;{money}</span>
       <span> My love: {love}</span>
     </div>
   )
