@@ -1,16 +1,16 @@
 import consts from "../../../constants"
 
-function onButtonClick(payload) {
+function addGiftToCart(categoryId, giftId) {
   return {
-    type: consts.CLICK_BUTTON,
-    payload,
+    type: consts.ADD_GIFT_TO_CART,
+    payload: {categoryId, giftId},
   }
 }
 
 export default function actions(dispatch) {
   return {
-    onButtonClick: (id) => {
-      dispatch(onButtonClick(id))
+    addToCart: (categoryId, giftId) => {
+      dispatch(addGiftToCart(categoryId, giftId))
     },
   }
 }

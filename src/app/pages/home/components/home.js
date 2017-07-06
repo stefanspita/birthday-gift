@@ -3,7 +3,8 @@ import PropTypes from "prop-types"
 import {BudgetBar} from "./budget-bar"
 import {GiftList} from "./gift-list"
 
-const Home = ({budget, love, giftCategories}) => {
+const Home = (props) => {
+  const {budget, love, giftCategories, addToCart} = props
   return (
     <div>
       <BudgetBar
@@ -14,6 +15,7 @@ const Home = ({budget, love, giftCategories}) => {
       />
       <GiftList
         giftCategories = {giftCategories}
+        addToCart={addToCart}
       />
     </div>
   )
@@ -23,6 +25,7 @@ Home.propTypes = {
   budget: PropTypes.object.isRequired,
   love: PropTypes.number.isRequired,
   giftCategories: PropTypes.array.isRequired,
+  addToCart: PropTypes.func.isRequired,
 }
 
 export default Home

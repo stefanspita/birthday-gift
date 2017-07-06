@@ -12,12 +12,9 @@ const selector = (state) => {
   }
 }
 
-const VisibleTodoList = connect(
-  selector,
-  actions
-)(Home)
+const BirthdayGiftApp = connect(selector, actions)(Home)
 
-export default VisibleTodoList
+export default BirthdayGiftApp
 
 export const reducers = {
   home: reducer,

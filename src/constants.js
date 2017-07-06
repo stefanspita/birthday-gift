@@ -1,3 +1,3 @@
 export default {
-  CLICK_BUTTON: "CLICK_BUTTON",
+  ADD_GIFT_TO_CART: "ADD_GIFT_TO_CART",
 }
