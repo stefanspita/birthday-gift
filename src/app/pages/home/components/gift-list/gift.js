@@ -1,10 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styles from "./gift.css"
 
-export function Gift({label, cost}) {
+// export function Gift({name, cost}) {
+export function Gift({cost}) {
+  // <label>{name}</label>
   return (
-    <div>
-      <label>{label}</label>
+    <div className={styles.wrapper}>
+      <label>Label</label>
       <div>
         Crowd tolerance cost: {cost.peopleOverload}&nbsp;
         Energy cost: {cost.energy}&nbsp;
@@ -15,6 +18,6 @@ export function Gift({label, cost}) {
 }
 
 Gift.propTypes = {
-  label: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   cost: PropTypes.object.isRequired,
 }

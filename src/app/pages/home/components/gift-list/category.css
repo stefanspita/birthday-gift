@@ -1,0 +1,15 @@
+.wrapper {
+  padding: 0.8rem 0;
+  text-align: center;
+}
+
+.categoryLabel {
+  font-size: 1.6rem;
+}
+
+.giftsRow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

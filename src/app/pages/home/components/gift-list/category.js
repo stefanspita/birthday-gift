@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import R from "ramda"
+import styles from "./category.css"
 import {Gift} from "./gift"
 
 function renderGift(props) {
@@ -10,11 +11,15 @@ function renderGift(props) {
   />)
 }
 
-export function GiftCategory({category, gifts}) {
+// export function GiftCategory({category, gifts}) {
+export function GiftCategory({gifts}) {
+  // <label>{category}</label>
   return (
-    <div>
-      <label>{category}</label>
-      {R.map(renderGift, gifts)}
+    <div className={styles.wrapper}>
+      <label className={styles.categoryLabel}>Category</label>
+      <div className={styles.giftsRow}>
+        {R.map(renderGift, gifts)}
+      </div>
     </div>
   )
 }
