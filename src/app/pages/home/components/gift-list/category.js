@@ -4,23 +4,22 @@ import R from "ramda"
 import styles from "./category.css"
 import {Gift} from "./gift"
 
-const renderGift = R.curry((addGiftToCart, props) => {
+const renderGift = R.curry((addToCart, props) => {
   return (<Gift
     key={props.id}
-    addGiftToCart={addGiftToCart}
+    addToCart={addToCart}
     {...props}
   />)
 })
 
 // export function GiftCategory({category, gifts}) {
-export function GiftCategory({id, gifts, addToCart}) {
-  const addGiftToCart = R.partial(addToCart, [id])
+export function GiftCategory({gifts, addToCart}) {
   // <label>{category}</label>
   return (
     <div className={styles.wrapper}>
       <label className={styles.categoryLabel}>Category</label>
       <div className={styles.giftsRow}>
-        {R.map(renderGift(addGiftToCart), gifts)}
+        {R.map(renderGift(addToCart), gifts)}
       </div>
     </div>
   )

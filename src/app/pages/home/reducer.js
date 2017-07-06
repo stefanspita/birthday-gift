@@ -1,24 +1,25 @@
 import R from "ramda"
 import initialBudget from "../../../data/initial-budget"
 import initialLove from "../../../data/initial-love"
-import initialGifts from "../../../data/initial-gifts"
+import {gifts as allAvailableGifts, categories} from "../../../data/initial-gifts"
 import consts from "../../../constants"
 
 const initialState = {
   budget: initialBudget,
   love: initialLove,
-  availableGifts: initialGifts,
+  availableGifts: allAvailableGifts,
+  categories: categories,
   cart: [],
 }
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
   case consts.ADD_GIFT_TO_CART: {
-    const {categoryId, giftId} = action.payload
-    const category = R.find(R.propEq("id", categoryId), state.availableGifts)
-    const gift = R.find(R.propEq("id", giftId), category.gifts)
+    const {giftId} = action.payload
+    const gift = R.find(R.propEq("id", giftId), state.availableGifts)
     return R.merge(state, {
       cart: R.append(gift, state.cart),
+      availableGifts: R.reject(R.propEq("id", giftId), state.availableGifts),
     })
   }
   default:

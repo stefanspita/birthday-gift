@@ -11,16 +11,16 @@ const renderGiftCategory = R.curry((addToCart, props) => {
   />)
 })
 
-export function GiftList({giftCategories, addToCart}) {
+export function GiftList({availableCategories, addToCart}) {
   return (
     <div>
-      {R.map(renderGiftCategory(addToCart), giftCategories)}
+      {R.map(renderGiftCategory(addToCart), availableCategories)}
     </div>
   )
 }
 
 GiftList.propTypes = {
-  giftCategories: PropTypes.array.isRequired,
+  availableCategories: PropTypes.array.isRequired,
   addToCart: PropTypes.func.isRequired,
 }
 

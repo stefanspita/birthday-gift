@@ -1,16 +1,16 @@
 import consts from "../../../constants"
 
-function addGiftToCart(categoryId, giftId) {
+function addGiftToCart(giftId) {
   return {
     type: consts.ADD_GIFT_TO_CART,
-    payload: {categoryId, giftId},
+    payload: {giftId},
   }
 }
 
 export default function actions(dispatch) {
   return {
-    addToCart: (categoryId, giftId) => {
-      dispatch(addGiftToCart(categoryId, giftId))
+    addToCart: (giftId) => {
+      dispatch(addGiftToCart(giftId))
     },
   }
 }
