@@ -2,9 +2,10 @@ import React from "react"
 import PropTypes from "prop-types"
 import {BudgetBar} from "./budget-bar"
 import {GiftList} from "./gift-list"
+import {Cart} from "./cart"
+import styles from "./home.css"
 
-const Home = (props) => {
-  const {budget, love, availableCategories, addToCart} = props
+const Home = ({budget, cart, love, availableCategories, addToCart}) => {
   return (
     <div>
       <BudgetBar
@@ -13,10 +14,13 @@ const Home = (props) => {
         money={budget.money}
         love={love}
       />
-      <GiftList
-        availableCategories = {availableCategories}
-        addToCart={addToCart}
-      />
+      <div className={styles.layout}>
+        <GiftList
+          availableCategories = {availableCategories}
+          addToCart={addToCart}
+        />
+        <Cart cart={cart} />
+      </div>
     </div>
   )
 }
@@ -25,6 +29,7 @@ Home.propTypes = {
   budget: PropTypes.object.isRequired,
   love: PropTypes.number.isRequired,
   availableCategories: PropTypes.array.isRequired,
+  cart: PropTypes.array.isRequired,
   addToCart: PropTypes.func.isRequired,
 }
 

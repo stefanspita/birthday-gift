@@ -17,6 +17,7 @@ const selector = (state) => {
     buttonClicked: state.home.buttonClicked,
     budget: state.home.budget,
     love: state.home.love,
+    cart: state.home.cart,
     availableCategories: R.reduce(attachGiftsToCategories(state.home.availableGifts), [], state.home.categories),
   }
 }
