@@ -5,8 +5,8 @@ import {routerMiddleware} from "react-router-redux"
 
 export default function getStoreMiddleware(history) {
   return applyMiddleware(
+    ReduxThunk,
     createLogger({collapsed: true}),
-    routerMiddleware(history),
-    ReduxThunk
+    routerMiddleware(history)
   )
 }

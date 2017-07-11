@@ -18,7 +18,7 @@ function calculateBudgetAfterSale (currency, state, gift) {
 
 export default function reducer(state = initialState, action) {
   switch (action.type) {
-  case consts.ADD_GIFT_TO_CART: {
+  case consts.ADD_GIFT_TO_CART_SUCCESS: {
     const {giftId} = action.payload
     const gift = R.find(R.propEq("id", giftId), state.availableGifts)
     return R.merge(state, {
