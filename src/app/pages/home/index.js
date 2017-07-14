@@ -14,7 +14,6 @@ const attachGiftsToCategories = R.curry((availableGifts, accumulator, category) 
 
 const selector = (state) => {
   return {
-    buttonClicked: state.home.buttonClicked,
     budget: state.home.budget,
     love: state.home.love,
     cart: state.home.cart,
@@ -25,7 +24,6 @@ const selector = (state) => {
 const BirthdayGiftApp = connect(selector, actions)(Home)
 
 export default BirthdayGiftApp
-
 export const reducers = {
   home: reducer,
 }
