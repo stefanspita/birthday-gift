@@ -9,17 +9,18 @@ function addGiftToCart(dispatch, giftId) {
   })
 }
 
-function failedAddingGiftToCart(dispatch, neededCurrencies) {
+function failedAddingGiftToCart(dispatch) {
   return dispatch({
     type: consts.ADD_GIFT_TO_CART_FAILED,
-    payload: neededCurrencies,
   })
 }
 
-const checkIfEnoughBudget = R.curry((budget, giftCost, acc, key) => {
-  if (R.lt(budget[key], giftCost[key]))
-    acc.push({currency: key, needed: giftCost[key] - budget[key]})
-  return acc
+const checkIfEnoughBudget = R.curry((budget, giftCost, keys) => {
+  for(let i=0;i<keys.length;i++) {
+    const key = keys[i]
+    if (R.lt(budget[key], giftCost[key])) return false
+  }
+  return true
 })
 
 export default {
@@ -27,14 +28,10 @@ export default {
     return function (dispatch, getState) {
       const state = getState().home
       const gift = R.find(R.propEq("id", giftId), state.availableGifts)
-      const neededCurrencies = R.reduce(
-        checkIfEnoughBudget(state.budget, gift.cost),
-        [],
-        R.keys(initialBudget)
-      )
+      const enoughBudget = checkIfEnoughBudget(state.budget, gift.cost, R.keys(initialBudget))
 
-      if (neededCurrencies.length !== 0) return failedAddingGiftToCart(dispatch, neededCurrencies)
-      return addGiftToCart(dispatch, giftId)
+      if (enoughBudget) return addGiftToCart(dispatch, giftId)
+      return failedAddingGiftToCart(dispatch)
     }
   },
 }
