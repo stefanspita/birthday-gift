@@ -11,6 +11,7 @@ function renderCartItem(props) {
 }
 
 export function Cart({cart}) {
+  if (cart.length === 0) return null
   return (
     <div>
       <h2>Shopping cart</h2>
