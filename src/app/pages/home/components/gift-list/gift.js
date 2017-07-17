@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {Currencies} from "../../../../components"
 import styles from "./gift.css"
 
 // export function Gift({name, cost}) {
@@ -14,9 +15,11 @@ export function Gift({id, cost, addToCart, outOfBudget}) {
     >
       <label>Label</label>
       <div>
-        Crowd tolerance cost: {cost.peopleOverload}&nbsp;
-        Energy cost: {cost.energy}&nbsp;
-        Money: &pound;{cost.money}
+        <Currencies
+          peopleOverload={cost.peopleOverload}
+          energy={cost.energy}
+          money={cost.money}
+        />
       </div>
     </div>
   )

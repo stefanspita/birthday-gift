@@ -1,11 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
+import {Currencies} from "../../../../components"
 import styles from "./budget-bar.css"
 
 export function BudgetBar({peopleOverload, energy, money, love}) {
   return (
     <div className={styles.wrapper}>
-      <span>Crowd tolerance: {peopleOverload} Energy: {energy} Money: &pound;{money}</span>
+      <Currencies
+        peopleOverload={peopleOverload}
+        energy={energy}
+        money={money}
+      />
       <span> My love: {love}</span>
     </div>
   )
