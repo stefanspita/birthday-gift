@@ -10,3 +10,11 @@
     cursor: pointer;
   }
 }
+
+.disabledWrapper {
+  opacity: 0.5;
+  padding: 0.3rem;
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+}
