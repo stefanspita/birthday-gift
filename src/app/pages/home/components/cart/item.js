@@ -1,11 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
+import styles from "./item.css"
 
 // export function CartItem({name, cost}) {
 export function CartItem({cost}) {
   // <label>{name}</label>
   return (
-    <div>
+    <div className={styles.item}>
       <label>Label</label>
       <div>
         Crowd tolerance cost: {cost.peopleOverload}&nbsp;
