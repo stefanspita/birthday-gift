@@ -12,12 +12,10 @@ const renderGift = R.curry((addToCart, props) => {
   />)
 })
 
-// export function GiftCategory({category, gifts}) {
-export function GiftCategory({gifts, addToCart}) {
-  // <label>{category}</label>
+export function GiftCategory({category, gifts, addToCart}) {
   return (
     <div className={styles.wrapper}>
-      <label className={styles.categoryLabel}>Category</label>
+      <label className={styles.categoryLabel}>{category}</label>
       <div className={styles.giftsRow}>
         {R.map(renderGift(addToCart), gifts)}
       </div>
