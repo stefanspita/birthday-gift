@@ -27,6 +27,7 @@ export function Cart({cart, cartTotal}) {
             money={cartTotal.money}
           />
         </div>
+        <a href="#" className={styles.button}>Redeem your gifts</a>
       </div>
     </div>
   )
