@@ -5,7 +5,7 @@ import {GiftList} from "./gift-list"
 import {Cart} from "./cart"
 import styles from "./home.css"
 
-const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCart}) => {
+const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCart, removeFromCart}) => {
   return (
     <div>
       <BudgetBar
@@ -22,6 +22,7 @@ const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCar
         <Cart
           cart={cart}
           cartTotal={cartTotal}
+          removeFromCart={removeFromCart}
         />
       </div>
     </div>
@@ -35,6 +36,7 @@ Home.propTypes = {
   cart: PropTypes.array.isRequired,
   cartTotal: PropTypes.object.isRequired,
   tryToAddToCart: PropTypes.func.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
 }
 
 export default Home

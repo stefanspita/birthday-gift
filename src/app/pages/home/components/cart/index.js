@@ -5,20 +5,21 @@ import {Currencies} from "../../../../components"
 import {CartItem} from "./item"
 import styles from "./cart.css"
 
-function renderCartItem(props) {
+const renderCartItem = R.curry((removeFromCart, props) => {
   return (<CartItem
     key={props.id}
+    removeFromCart={removeFromCart}
     {...props}
   />)
-}
+})
 
-export function Cart({cart, cartTotal}) {
+export function Cart({cart, cartTotal, removeFromCart}) {
   if (cart.length === 0) return null
   return (
     <div>
       <h2>Shopping cart</h2>
       <div className={styles.cart}>
-        <div>{R.map(renderCartItem, cart)}</div>
+        <div>{R.map(renderCartItem(removeFromCart), cart)}</div>
         <div>
           <h4>Total</h4>
           <Currencies
@@ -36,6 +37,7 @@ export function Cart({cart, cartTotal}) {
 Cart.propTypes = {
   cart: PropTypes.array.isRequired,
   cartTotal: PropTypes.object.isRequired,
+  removeFromCart: PropTypes.func.isRequired,
 }
 
 renderCartItem.propTypes = {
