@@ -9,6 +9,13 @@ function addGiftToCart(dispatch, giftId) {
   })
 }
 
+function removeGiftFromCart(dispatch, giftId) {
+  return dispatch({
+    type: consts.REMOVE_GIFT_FROM_CART_SUCCESS,
+    payload: {giftId},
+  })
+}
+
 function failedAddingGiftToCart(dispatch) {
   return dispatch({
     type: consts.ADD_GIFT_TO_CART_FAILED,
@@ -32,6 +39,12 @@ export default {
 
       if (enoughBudget) return addGiftToCart(dispatch, giftId)
       return failedAddingGiftToCart(dispatch)
+    }
+  },
+
+  removeFromCart: (giftId) => {
+    return function (dispatch) {
+      return removeGiftFromCart(dispatch, giftId)
     }
   },
 }
