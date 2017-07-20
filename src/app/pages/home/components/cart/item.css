@@ -1,4 +1,14 @@
 .item {
   font-size: 1rem;
   padding: 0.2rem 0;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.removeIcon {
+  font-size: 1.6rem;
+  color: red;
+  cursor: pointer;
+  padding: 3px;
+  align-self: center;
 }
