@@ -7,6 +7,9 @@ import consts from "../../../constants"
 function calculateBudgetAfterSale (currency, state, gift) {
   return R.useWith(R.subtract, [R.path(["budget", currency]), R.path(["cost", currency])])(state, gift)
 }
+function calculateBudgetAfterRemoval (currency, state, gift) {
+  return R.useWith(R.add, [R.path(["budget", currency]), R.path(["cost", currency])])(state, gift)
+}
 
 const checkIfEnoughBudget = R.curry((budget, gift) => {
   const keys = R.keys(initialBudget)
@@ -51,6 +54,24 @@ export default function reducer(state = initialState, action) {
       budget: newBudget,
     })
   }
+
+  case consts.REMOVE_GIFT_FROM_CART_SUCCESS: {
+    const {giftId} = action.payload
+    const gift = R.find(R.propEq("id", giftId), allAvailableGifts)
+    const newBudget = {
+      peopleOverload: calculateBudgetAfterRemoval("peopleOverload", state, gift),
+      energy: calculateBudgetAfterRemoval("energy", state, gift),
+      money: calculateBudgetAfterRemoval("money", state, gift),
+    }
+
+    return R.merge(state, {
+      cart: R.reject(R.propEq("id", giftId), state.cart),
+      availableGifts: R.append(gift, state.availableGifts),
+      love: state.love - gift.love,
+      budget: newBudget,
+    })
+  }
+
   default:
     return state
   }
