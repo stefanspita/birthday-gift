@@ -16,10 +16,11 @@ const checkIfEnoughBudget = R.curry((budget, gift) => {
   }
   return gift
 })
+const markGiftsAsOffBudget = (availableBudget) => R.map(checkIfEnoughBudget(availableBudget))
 
-function updateGiftsState(availableBudget, availableGifts, giftId) {
+function updateGiftsStateAfterPurchase(availableBudget, availableGifts, giftId) {
   return R.compose(
-    R.map(checkIfEnoughBudget(availableBudget)),
+    markGiftsAsOffBudget(availableBudget),
     R.reject(R.propEq("id", giftId))
   )(availableGifts)
 }
@@ -27,7 +28,7 @@ function updateGiftsState(availableBudget, availableGifts, giftId) {
 const initialState = {
   budget: initialBudget,
   love: initialLove,
-  availableGifts: updateGiftsState(initialBudget, allAvailableGifts, -1),
+  availableGifts: markGiftsAsOffBudget(initialBudget)(allAvailableGifts),
   categories: categories,
   cart: [],
 }
@@ -45,7 +46,7 @@ export default function reducer(state = initialState, action) {
 
     return R.merge(state, {
       cart: R.append(gift, state.cart),
-      availableGifts: updateGiftsState(newBudget, state.availableGifts, giftId),
+      availableGifts: updateGiftsStateAfterPurchase(newBudget, state.availableGifts, giftId),
       love: state.love + gift.love,
       budget: newBudget,
     })
