@@ -1,3 +1,6 @@
+.cart {
+  min-width: 220px;
+}
 .cart > * + * {
   margin-top: 2rem;
 }
