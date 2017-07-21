@@ -2,10 +2,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import {Currencies} from "../../../../components"
 import styles from "./gift.css"
+// import giftPictureSrc from "./assets/gift-outline-md.png"
 
 export function Gift({id, name, cost, addToCart, outOfBudget}) {
   let giftClass = styles.wrapper
   if (outOfBudget) giftClass = styles.disabledWrapper
+  // <div className={styles.giftImage}>
+  //   <img src={giftPictureSrc}></img>
+  //   </div>
   return (
     <div
       className={giftClass}
