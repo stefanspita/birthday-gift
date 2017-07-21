@@ -1,13 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
+import ReactTooltip from "react-tooltip"
 import styles from "./currencies.css"
 
 // export function CartItem({name, cost}) {
 export function Currencies({peopleOverload, energy, money}) {
   return (<div className={styles.currencyWrapper}>
-    <span><i className={`fa fa-users ${styles.peopleOverload}`} /> {peopleOverload}</span>
-    <span><i className={`fa fa-bolt ${styles.energy}`} /> {energy}</span>
-    <span><i className={`fa fa-money ${styles.money}`} /> {money}</span>
+    <ReactTooltip />
+    <span data-tip="People overload"><i className={`fa fa-users ${styles.peopleOverload}`} /> {peopleOverload}</span>
+    <span data-tip="Energy"><i className={`fa fa-bolt ${styles.energy}`} /> {energy}</span>
+    <span data-tip="Simoleans"><i className={`fa fa-money ${styles.money}`} /> {money}</span>
   </div>)
 }
 

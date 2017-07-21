@@ -1,5 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
+import ReactTooltip from "react-tooltip"
 import {Currencies} from "../../../../components"
 import styles from "./budget-bar.css"
 
@@ -11,7 +12,10 @@ export function BudgetBar({peopleOverload, energy, money, love}) {
         energy={energy}
         money={money}
       />
-      <span><i className={`fa fa-heart ${styles.heart}`} /> {love}</span>
+      <ReactTooltip />
+      <span data-tip="Earned love. Click to exchange me for currency!!!">
+        <i className={`fa fa-heart ${styles.heart}`} /> {love}
+      </span>
     </div>
   )
 }
