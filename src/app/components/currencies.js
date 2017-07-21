@@ -7,8 +7,8 @@ import styles from "./currencies.css"
 export function Currencies({peopleOverload, energy, money}) {
   return (<div className={styles.currencyWrapper}>
     <ReactTooltip />
-    <span data-tip="People overload"><i className={`fa fa-users ${styles.peopleOverload}`} /> {peopleOverload}</span>
-    <span data-tip="Energy"><i className={`fa fa-bolt ${styles.energy}`} /> {energy}</span>
+    <span data-tip="Crowds!!!"><i className={`fa fa-users ${styles.peopleOverload}`} /> {peopleOverload}</span>
+    <span data-tip="Vitality"><i className={`fa fa-bolt ${styles.energy}`} /> {energy}</span>
     <span data-tip="Simoleans"><i className={`fa fa-money ${styles.money}`} /> {money}</span>
   </div>)
 }
