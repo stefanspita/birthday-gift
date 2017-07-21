@@ -1,7 +1,7 @@
 export const categories = [
-  {id: 1, category: "Travel together"},
-  {id: 2, category: "Treat you right!"},
-  {id: 3, category: "Fun together"},
+  {id: 1, category: "Traveling together"},
+  {id: 2, category: "Treating you right!"},
+  {id: 3, category: "Having fun together"},
   {id: 4, category: "Writing"},
   {id: 5, category: "The things I do for you"},
 ]
