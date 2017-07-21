@@ -5,7 +5,6 @@
 
   &:hover {
     background-color: #ffece6;
-    box-shadow: 5px 5px 3px #ffdacc;
     cursor: pointer;
   }
 }
