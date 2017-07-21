@@ -9,6 +9,7 @@ import uglify from "rollup-plugin-uglify"
 import postcss from "rollup-plugin-postcss"
 import livereload from "rollup-plugin-livereload"
 import serve from "rollup-plugin-serve"
+import image from "rollup-plugin-img"
 
 // PostCSS plugins
 import simplevars from "postcss-simple-vars"
@@ -62,11 +63,13 @@ export default {
     eslint({
       exclude: [
         "src/**/*.css",
+        "src/**/*.png",
       ],
     }),
     babel({
       exclude: "node_modules/**",
     }),
+    image({limit: 1000000}),
     replace({
       "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV || "development"),
     }),
