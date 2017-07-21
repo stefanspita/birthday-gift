@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import {Currencies} from "../../../../components"
 import styles from "./item.css"
 
-export function CartItem({id, name, cost, removeFromCart}) {
+export function CartItem({id, categoryName, cost, removeFromCart}) {
   return (
     <div className={styles.item}>
       <div
@@ -13,7 +13,7 @@ export function CartItem({id, name, cost, removeFromCart}) {
         <i className="fa fa-minus-circle"></i>
       </div>
       <div>
-        <label>{name}</label>
+        <label>Secret gift related to {categoryName.toLowerCase()}</label>
         <div>
           <Currencies
             peopleOverload={cost.peopleOverload}
@@ -28,7 +28,7 @@ export function CartItem({id, name, cost, removeFromCart}) {
 
 CartItem.propTypes = {
   id: PropTypes.number.isRequired,
-  name: PropTypes.string.isRequired,
+  categoryName: PropTypes.string.isRequired,
   cost: PropTypes.object.isRequired,
   removeFromCart: PropTypes.func.isRequired,
 }
