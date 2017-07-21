@@ -1,0 +1,15 @@
+.currencyWrapper > * {
+  padding: 8px;
+}
+
+.peopleOverload {
+  color: #4d004d;
+}
+
+.energy {
+  color: #e6b800;
+}
+
+.money {
+  color: green;
+}

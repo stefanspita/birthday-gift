@@ -11,7 +11,7 @@ export function BudgetBar({peopleOverload, energy, money, love}) {
         energy={energy}
         money={money}
       />
-      <span> My love: {love}</span>
+      <span><i className={`fa fa-heart ${styles.heart}`} /> {love}</span>
     </div>
   )
 }
