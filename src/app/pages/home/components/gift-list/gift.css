@@ -1,7 +1,6 @@
 .wrapper {
-  padding: 0.3rem;
-  width: 300px;
-  height: 100px;
+  padding: 1rem 0.5rem;
+  width: 250px;
   border-radius: 5px;
 
   &:hover {
@@ -15,7 +14,11 @@
   opacity: 0.5;
   cursor: not-allowed;
   padding: 0.3rem;
-  width: 300px;
-  height: 100px;
+  width: 250px;
   border-radius: 5px;
+}
+
+.giftImage {
+  width: 100%;
+  height: auto;
 }
