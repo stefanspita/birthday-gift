@@ -16,20 +16,17 @@ const renderCartItem = R.curry((removeFromCart, props) => {
 export function Cart({cart, cartTotal, removeFromCart}) {
   if (cart.length === 0) return null
   return (
-    <div>
-      <h2>Shopping cart</h2>
-      <div className={styles.cart}>
-        <div>{R.map(renderCartItem(removeFromCart), cart)}</div>
-        <div>
-          <h4>Total</h4>
-          <Currencies
-            peopleOverload={cartTotal.peopleOverload}
-            energy={cartTotal.energy}
-            money={cartTotal.money}
-          />
-        </div>
-        <a href="#" className={styles.button}>Redeem your gifts</a>
+    <div className={styles.cart}>
+      <div>{R.map(renderCartItem(removeFromCart), cart)}</div>
+      <div>
+        <h4>Total</h4>
+        <Currencies
+          peopleOverload={cartTotal.peopleOverload}
+          energy={cartTotal.energy}
+          money={cartTotal.money}
+        />
       </div>
+      <a href="#" className={styles.button}>Redeem your gifts</a>
     </div>
   )
 }

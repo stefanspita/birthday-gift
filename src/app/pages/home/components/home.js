@@ -5,6 +5,17 @@ import {GiftList} from "./gift-list"
 import {Cart} from "./cart"
 import styles from "./home.css"
 
+function getCartComponent(cart, cartTotal, removeFromCart) {
+  if (cart.length === 0) return null
+  return (<div className={styles.cart}>
+    <Cart
+      cart={cart}
+      cartTotal={cartTotal}
+      removeFromCart={removeFromCart}
+    />
+  </div>)
+}
+
 const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCart, removeFromCart}) => {
   return (
     <div>
@@ -15,15 +26,13 @@ const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCar
         love={love}
       />
       <div className={styles.layout}>
-        <GiftList
-          availableCategories = {availableCategories}
-          addToCart={tryToAddToCart}
-        />
-        <Cart
-          cart={cart}
-          cartTotal={cartTotal}
-          removeFromCart={removeFromCart}
-        />
+        <div className={styles.content}>
+          <GiftList
+            availableCategories = {availableCategories}
+            addToCart={tryToAddToCart}
+          />
+        </div>
+        {getCartComponent(cart, cartTotal, removeFromCart)}
       </div>
     </div>
   )

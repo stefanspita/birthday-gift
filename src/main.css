@@ -16,7 +16,6 @@ body,* {
 }
 
 body {
-  padding: 0 2rem;
   color: $color-text;
   font-family: $font-family;
   font-size: 1.3rem;
@@ -28,4 +27,8 @@ body {
   );
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
