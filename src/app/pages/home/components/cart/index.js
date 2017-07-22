@@ -25,8 +25,8 @@ export function Cart({cart, cartTotal, removeFromCart}) {
           energy={cartTotal.energy}
           money={cartTotal.money}
         />
+        <a href="#" className={styles.button}>Redeem your gifts</a>
       </div>
-      <a href="#" className={styles.button}>Redeem your gifts</a>
     </div>
   )
 }
