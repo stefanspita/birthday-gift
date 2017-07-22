@@ -15,8 +15,13 @@ const renderCartItem = R.curry((removeFromCart, props) => {
 
 export function Cart({cart, cartTotal, removeFromCart}) {
   if (cart.length === 0) return null
+
+  const backgroundItemClasses = `fa fa-shopping-cart ${styles.cartBackgroundItem}`
   return (
     <div className={styles.cart}>
+      <div className={styles.cartBackground}>
+        {R.map((key) => (<i key={key} className={backgroundItemClasses}></i>), [1, 2, 3, 4])}
+      </div>
       <div>{R.map(renderCartItem(removeFromCart), cart)}</div>
       <div>
         <h4>Total</h4>
