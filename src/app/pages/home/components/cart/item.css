@@ -7,8 +7,13 @@
 
 .removeIcon {
   font-size: 1.6rem;
-  color: red;
+  color: #ff4d4d;
   cursor: pointer;
   padding: 3px;
   align-self: center;
+
+  &:hover {
+    color: #ff1a1a;
+    text-shadow: 0 0 2px #ff4d4d;
+  }
 }
