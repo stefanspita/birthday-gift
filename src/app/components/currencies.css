@@ -1,5 +1,10 @@
+.currencyWrapper {
+  display: flex;
+}
+
 .currencyWrapper > * {
   padding: 8px;
+  flex-grow: 1;
 }
 
 .peopleOverload {
