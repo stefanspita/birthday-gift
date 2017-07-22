@@ -1,7 +1,12 @@
-.layout {
+.appLayout {
   display: flex;
+  flex-direction: column;
   height: 100vh;
   overflow: hidden;
+}
+
+.bodyLayout {
+  display: flex;
 }
 
 .content {
@@ -12,6 +17,7 @@
 }
 
 .cart {
+  padding: 10px;
   flex: 1 0 250px;
   overflow: auto;
 }

@@ -18,14 +18,16 @@ function getCartComponent(cart, cartTotal, removeFromCart) {
 
 const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCart, removeFromCart}) => {
   return (
-    <div>
-      <BudgetBar
-        peopleOverload={budget.peopleOverload}
-        energy={budget.energy}
-        money={budget.money}
-        love={love}
-      />
-      <div className={styles.layout}>
+    <div className={styles.appLayout}>
+      <div>
+        <BudgetBar
+          peopleOverload={budget.peopleOverload}
+          energy={budget.energy}
+          money={budget.money}
+          love={love}
+        />
+      </div>
+      <div className={styles.bodyLayout}>
         <div className={styles.content}>
           <GiftList
             availableCategories = {availableCategories}
