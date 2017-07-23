@@ -80,6 +80,26 @@ export default function reducer(state = initialState, action) {
     })
   }
 
+  case consts.SELL_CURRENCY: {
+    const {currency} = action.payload
+    const {budget} = state
+    const newBudget = R.assoc(currency, budget[currency] - 1, budget)
+    return R.merge(state, {
+      budget: newBudget,
+      love: state.love + 1,
+    })
+  }
+
+  case consts.BUY_CURRENCY: {
+    const {currency} = action.payload
+    const {budget} = state
+    const newBudget = R.assoc(currency, budget[currency] + 1, budget)
+    return R.merge(state, {
+      budget: newBudget,
+      love: state.love - 1,
+    })
+  }
+
   default:
     return state
   }

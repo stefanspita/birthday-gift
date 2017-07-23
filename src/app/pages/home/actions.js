@@ -30,6 +30,19 @@ const checkIfEnoughBudget = R.curry((budget, giftCost, keys) => {
   return true
 })
 
+function sellCurrency(dispatch, currency) {
+  return dispatch({
+    type: consts.SELL_CURRENCY,
+    payload: {currency},
+  })
+}
+
+function buyCurrency(dispatch, currency) {
+  return dispatch({
+    type: consts.BUY_CURRENCY,
+    payload: {currency},
+  })
+}
 
 export default {
   tryToAddToCart: (giftId) => {
@@ -46,6 +59,20 @@ export default {
   removeFromCart: (giftId) => {
     return function (dispatch) {
       return removeGiftFromCart(dispatch, giftId)
+    }
+  },
+
+  sellCurrency: (currency) => {
+    return function (dispatch, getState) {
+      const remainingCurrency = getState().home.budget[currency]
+      if (remainingCurrency > 0) return sellCurrency(dispatch, currency)
+    }
+  },
+
+  buyCurrency: (currency) => {
+    return function (dispatch, getState) {
+      const remainingLove = getState().home.love
+      if (remainingLove > 0) return buyCurrency(dispatch, currency)
     }
   },
 }
