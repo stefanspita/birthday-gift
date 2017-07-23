@@ -41,7 +41,7 @@ const initialState = {
   availableGifts: markGiftsAsOffBudget(initialBudget)(allAvailableGifts),
   categories: categories,
   cart: [],
-  loveExchangeView: {show: false},
+  loveExchangeView: {},
 }
 
 export default function reducer(state = initialState, action) {
@@ -79,12 +79,6 @@ export default function reducer(state = initialState, action) {
       budget: newBudget,
     })
   }
-
-  case consts.SHOW_LOVE_EXCHANGE_MODAL:
-    return R.assocPath(["loveExchangeView", "show"], true, state)
-
-  case consts.HIDE_LOVE_EXCHANGE_MODAL:
-    return R.assocPath(["loveExchangeView", "show"], true, false)
 
   default:
     return state

@@ -2,22 +2,42 @@ import React from "react"
 import PropTypes from "prop-types"
 import ReactTooltip from "react-tooltip"
 import {Currencies} from "../../../../components"
+import {LoveExchange} from "./love-exchange"
 import styles from "./budget-bar.css"
 
-export function BudgetBar({peopleOverload, energy, money, love}) {
-  return (
-    <div className={styles.wrapper}>
-      <Currencies
-        peopleOverload={peopleOverload}
-        energy={energy}
-        money={money}
-      />
-      <ReactTooltip />
-      <span data-tip="Earned love. Click to exchange me for currency!!!">
-        <i className={`fa fa-heart ${styles.heart}`} /> {love}
-      </span>
-    </div>
-  )
+export class BudgetBar extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {showLoveExchange: false}
+    this.toggleExchanceView = this.toggleExchanceView.bind(this)
+  }
+
+  toggleExchanceView(showLoveExchange) {
+    if (showLoveExchange) return this.setState({showLoveExchange: false})
+    return this.setState({showLoveExchange: true})
+  }
+
+  render() {
+    const {peopleOverload, energy, money, love, loveExchangeView} = this.props
+    return (
+      <div className={styles.wrapper}>
+        <Currencies
+          peopleOverload={peopleOverload}
+          energy={energy}
+          money={money}
+        />
+        <ReactTooltip />
+        <span
+          onClick={() => this.toggleExchanceView(this.state.showLoveExchange)}
+          data-tip="Earned love. Click to exchange me for currency!!!">
+          <i className={`fa fa-heart ${styles.heart}`} /> {love}
+        </span>
+        {this.state.showLoveExchange ?
+          <LoveExchange loveExchange={loveExchangeView} /> : null
+        }
+      </div>
+    )
+  }
 }
 
 BudgetBar.propTypes = {
@@ -25,4 +45,5 @@ BudgetBar.propTypes = {
   energy: PropTypes.number.isRequired,
   money: PropTypes.number.isRequired,
   love: PropTypes.number.isRequired,
+  loveExchangeView: PropTypes.object.isRequired,
 }
