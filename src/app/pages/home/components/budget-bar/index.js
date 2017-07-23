@@ -8,7 +8,7 @@ import styles from "./budget-bar.css"
 export class BudgetBar extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {showLoveExchange: true}
+    this.state = {showLoveExchange: false}
     this.toggleExchanceView = this.toggleExchanceView.bind(this)
   }
 
