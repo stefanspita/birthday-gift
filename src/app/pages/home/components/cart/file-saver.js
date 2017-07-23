@@ -19,10 +19,22 @@ function getLoveEarned(gift) {
   return `${word} you ${love} love`
 }
 
-function prepareDataForSaving(lineBreak, rawJsonArray) {
-  return R.reduce((fileContent, gift) => {
+function getLoveText(loveLeft) {
+  if (loveLeft === 0) return "No extra love earned from me :(   Maybe next year)"
+  if (loveLeft === 0) return `So selfish! You lost ${Math.abs(loveLeft)} seconds of my endless love`
+  return `So selfless! On your birthday month?? You've earned ${Math.abs(loveLeft)} days on top of my endless love!`
+}
+
+function getFinalText(lineBreak, totalCost, loveLeft) {
+  return `${lineBreak}${lineBreak}Total cost: ${totalCost.peopleOverload} crowd tolerance   ${totalCost.energy} energy   ${totalCost.money} imaginary money${lineBreak}${lineBreak}${getLoveText(loveLeft)}`
+}
+
+function prepareDataForSaving(lineBreak, cartTotal, love, rawJsonArray) {
+  let textToSave = R.reduce((fileContent, gift) => {
     return fileContent + `- ${gift.name} (${gift.categoryName}) ~~~ ${getGiftCost(gift)} and ${getLoveEarned(gift)} ${lineBreak}`
   }, getInitialContent(lineBreak), rawJsonArray)
+  textToSave += getFinalText(lineBreak, cartTotal, love)
+  return textToSave
 }
 
 function getLineBreakChar(platform) {
@@ -31,10 +43,10 @@ function getLineBreakChar(platform) {
   return "\n"
 }
 
-export default function saveFile(cartContent) {
+export default function saveFile(cartContent, cartTotal, love) {
   const fileName = "gifts.txt"
   const lineBreak = getLineBreakChar(window.navigator.platform)
-  const data = prepareDataForSaving(lineBreak, cartContent)
+  const data = prepareDataForSaving(lineBreak, cartTotal, love, cartContent)
   const file = new Blob([data], {type: "text/plain"})
 
   if (window.navigator.msSaveOrOpenBlob) // IE10+

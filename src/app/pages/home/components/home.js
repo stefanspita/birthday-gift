@@ -5,13 +5,14 @@ import {GiftList} from "./gift-list"
 import {Cart} from "./cart"
 import styles from "./home.css"
 
-function getCartComponent(cart, cartTotal, removeFromCart) {
+function getCartComponent(removeFromCart, cart, cartTotal, love) {
   if (cart.length === 0) return null
   return (<div className={styles.cart}>
     <Cart
       cart={cart}
       cartTotal={cartTotal}
       removeFromCart={removeFromCart}
+      love={love}
     />
   </div>)
 }
@@ -37,7 +38,7 @@ const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCar
             addToCart={tryToAddToCart}
           />
         </div>
-        {getCartComponent(cart, cartTotal, removeFromCart)}
+        {getCartComponent(removeFromCart, cart, cartTotal, love)}
       </div>
     </div>
   )

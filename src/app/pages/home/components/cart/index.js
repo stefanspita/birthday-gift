@@ -14,7 +14,7 @@ const renderCartItem = R.curry((removeFromCart, props) => {
   />)
 })
 
-export function Cart({cart, cartTotal, removeFromCart}) {
+export function Cart({cart, cartTotal, removeFromCart, love}) {
   if (cart.length === 0) return null
 
   const backgroundItemClasses = `fa fa-shopping-cart ${styles.cartBackgroundItem}`
@@ -31,7 +31,7 @@ export function Cart({cart, cartTotal, removeFromCart}) {
           energy={cartTotal.energy}
           money={cartTotal.money}
         />
-        <a onClick={() => saveFile(cart)} className={styles.button}>Redeem your gifts</a>
+        <a onClick={() => saveFile(cart, cartTotal, love)} className={styles.button}>Redeem your gifts</a>
       </div>
     </div>
   )
@@ -40,6 +40,7 @@ export function Cart({cart, cartTotal, removeFromCart}) {
 Cart.propTypes = {
   cart: PropTypes.array.isRequired,
   cartTotal: PropTypes.object.isRequired,
+  love: PropTypes.number.isRequired,
   removeFromCart: PropTypes.func.isRequired,
 }
 
