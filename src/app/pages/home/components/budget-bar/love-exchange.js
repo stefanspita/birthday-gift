@@ -1,9 +1,38 @@
 import React from "react"
+import R from "ramda"
 import PropTypes from "prop-types"
 import {Currencies} from "../../../../components"
 import styles from "./love-exchange.css"
 
+let interval
+
+function onMouseDown(fn, currency) {
+  interval = setInterval(() => fn(currency), 100)
+}
+
+function onMouseUp() {
+  clearInterval(interval)
+}
+
+const renderButtonSet = R.curry((style, buyCurrency, sellCurrency, currency) => {
+  return (<div className={style}>
+    <button
+      className={styles.positive}
+      onClick={(() => buyCurrency(currency))}
+      onMouseDown={() => onMouseDown(buyCurrency, currency)}
+      onMouseUp={() => onMouseUp()}
+    >+</button>
+    <button
+      className={styles.negative}
+      onClick={(() => sellCurrency(currency))}
+      onMouseDown={() => onMouseDown(sellCurrency, currency)}
+      onMouseUp={() => onMouseUp()}
+    >-</button>
+  </div>)
+})
+
 export function LoveExchange({peopleOverload, energy, money, sellCurrency, buyCurrency}) {
+  const renderButtons = renderButtonSet(styles.buttonGroupWrapper, buyCurrency, sellCurrency)
   return (
     <div
       className={styles.exchangeModal}
@@ -14,18 +43,9 @@ export function LoveExchange({peopleOverload, energy, money, sellCurrency, buyCu
         money={money}
       />
       <div className={styles.currencyExchangeWrapper}>
-        <div className={styles.buttonGroupWrapper}>
-          <button className={styles.positive} onClick={() => buyCurrency("peopleOverload")}>+</button>
-          <button className={styles.negative} onClick={() => sellCurrency("peopleOverload")}>-</button>
-        </div>
-        <div className={styles.buttonGroupWrapper}>
-          <button className={styles.positive} onClick={() => buyCurrency("energy")}>+</button>
-          <button className={styles.negative} onClick={() => sellCurrency("energy")}>-</button>
-        </div>
-        <div className={styles.buttonGroupWrapper}>
-          <button className={styles.positive} onClick={() => buyCurrency("money")}>+</button>
-          <button className={styles.negative} onClick={() => sellCurrency("money")}>-</button>
-        </div>
+        {renderButtons("peopleOverload")}
+        {renderButtons("energy")}
+        {renderButtons("money")}
       </div>
     </div>)
 }
