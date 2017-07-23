@@ -15,3 +15,16 @@
 .heart {
   color: #cc0000;
 }
+
+.love {
+  cursor: pointer;
+
+  &:hover {
+    text-shadow: 0 0 4px #cc0000;
+  }
+}
+
+.loveActive {
+  background-color: #ffe6cc;
+  text-shadow: 0 0 2px;
+}

@@ -8,7 +8,7 @@ import styles from "./budget-bar.css"
 export class BudgetBar extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {showLoveExchange: false}
+    this.state = {showLoveExchange: true}
     this.toggleExchanceView = this.toggleExchanceView.bind(this)
   }
 
@@ -19,6 +19,9 @@ export class BudgetBar extends React.Component {
 
   render() {
     const {peopleOverload, energy, money, love, loveExchangeView} = this.props
+    let loveClass = styles.love
+    if (this.state.showLoveExchange) loveClass += ` ${styles.loveActive}`
+
     return (
       <div className={styles.wrapper}>
         <Currencies
@@ -28,6 +31,7 @@ export class BudgetBar extends React.Component {
         />
         <ReactTooltip />
         <span
+          className={loveClass}
           onClick={() => this.toggleExchanceView(this.state.showLoveExchange)}
           data-tip="Earned love. Click to exchange me for currency!!!">
           <i className={`fa fa-heart ${styles.heart}`} /> {love}

@@ -1,0 +1,8 @@
+.exchangeModal {
+  background-color: #ffe6cc;
+  z-index: 4;
+  position: fixed;
+  right: 0;
+  top: 45px;
+  padding: 10px;
+}
