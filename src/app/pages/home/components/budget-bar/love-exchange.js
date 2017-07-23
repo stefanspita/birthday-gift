@@ -4,10 +4,11 @@ import PropTypes from "prop-types"
 import {Currencies} from "../../../../components"
 import styles from "./love-exchange.css"
 
+const MOUSE_HOLD_INTERVAL_TIMEOUT = 80
 let interval
 
 function onMouseDown(fn, currency) {
-  interval = setInterval(() => fn(currency), 100)
+  interval = setInterval(() => fn(currency), MOUSE_HOLD_INTERVAL_TIMEOUT)
 }
 
 function onMouseUp() {
