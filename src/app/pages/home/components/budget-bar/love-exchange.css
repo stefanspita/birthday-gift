@@ -5,4 +5,32 @@
   right: 0;
   top: 45px;
   padding: 10px;
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+
+.currencyExchangeWrapper {
+  display: flex;
+}
+
+.buttonGroupWrapper {
+  flex-grow: 1;
+  text-align: center;
+  display: flex;
+  padding: 0 5px;
+}
+
+.buttonGroupWrapper > * {
+  flex-grow: 1;
+  text-align: center;
+  padding: 4px;
+  font-size: 1.6rem;
+}
+
+.positive {
+  background-color: #ccffcc;
+}
+
+.negative {
+  background-color: #ffcccc;
 }

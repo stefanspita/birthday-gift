@@ -41,7 +41,6 @@ const initialState = {
   availableGifts: markGiftsAsOffBudget(initialBudget)(allAvailableGifts),
   categories: categories,
   cart: [],
-  loveExchangeView: {},
 }
 
 export default function reducer(state = initialState, action) {

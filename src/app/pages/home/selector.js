@@ -25,7 +25,6 @@ function selector(state) {
     cart: R.map(attachCategoryToGifts(state.home.categories), state.home.cart),
     cartTotal: R.reduce(sumForCurrency(state.home.cart), {}, R.keys(initialBudget)),
     availableCategories: R.reduce(attachGiftsToCategories(state.home.availableGifts), [], state.home.categories),
-    loveExchangeView: state.home.loveExchangeView,
   }
 }
 

@@ -18,7 +18,7 @@ export class BudgetBar extends React.Component {
   }
 
   render() {
-    const {peopleOverload, energy, money, love, loveExchangeView} = this.props
+    const {peopleOverload, energy, money, love} = this.props
     let loveClass = styles.love
     if (this.state.showLoveExchange) loveClass += ` ${styles.loveActive}`
 
@@ -37,7 +37,13 @@ export class BudgetBar extends React.Component {
           <i className={`fa fa-heart ${styles.heart}`} /> {love}
         </span>
         {this.state.showLoveExchange ?
-          <LoveExchange loveExchange={loveExchangeView} /> : null
+          <LoveExchange
+            peopleOverload={peopleOverload}
+            energy={energy}
+            money={money}
+            sellCurrency={this.props.sellCurrency}
+            buyCurrency={this.props.buyCurrency}
+          /> : null
         }
       </div>
     )
@@ -49,5 +55,6 @@ BudgetBar.propTypes = {
   energy: PropTypes.number.isRequired,
   money: PropTypes.number.isRequired,
   love: PropTypes.number.isRequired,
-  loveExchangeView: PropTypes.object.isRequired,
+  sellCurrency: PropTypes.func.isRequired,
+  buyCurrency: PropTypes.func.isRequired,
 }

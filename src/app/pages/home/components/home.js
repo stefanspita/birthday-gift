@@ -16,7 +16,8 @@ function getCartComponent(cart, cartTotal, removeFromCart) {
   </div>)
 }
 
-const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCart, removeFromCart, loveExchangeView}) => {
+const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCart,
+  removeFromCart, sellCurrency, buyCurrency}) => {
   return (
     <div className={styles.appLayout}>
       <div>
@@ -25,7 +26,8 @@ const Home = ({budget, cart, cartTotal, love, availableCategories, tryToAddToCar
           energy={budget.energy}
           money={budget.money}
           love={love}
-          loveExchangeView={loveExchangeView}
+          sellCurrency={sellCurrency}
+          buyCurrency={buyCurrency}
         />
       </div>
       <div className={styles.bodyLayout}>
@@ -49,7 +51,8 @@ Home.propTypes = {
   cartTotal: PropTypes.object.isRequired,
   tryToAddToCart: PropTypes.func.isRequired,
   removeFromCart: PropTypes.func.isRequired,
-  loveExchangeView: PropTypes.object.isRequired,
+  sellCurrency: PropTypes.func.isRequired,
+  buyCurrency: PropTypes.func.isRequired,
 }
 
 export default Home
