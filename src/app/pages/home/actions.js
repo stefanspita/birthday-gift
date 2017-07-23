@@ -22,6 +22,18 @@ function failedAddingGiftToCart(dispatch) {
   })
 }
 
+function showLoveExchangeModal(dispatch) {
+  return dispatch({
+    type: consts.SHOW_LOVE_EXCHANGE_MODAL,
+  })
+}
+
+function hideLoveExchangeModal(dispatch) {
+  return dispatch({
+    type: consts.HIDE_LOVE_EXCHANGE_MODAL,
+  })
+}
+
 const checkIfEnoughBudget = R.curry((budget, giftCost, keys) => {
   for(let i=0;i<keys.length;i++) {
     const key = keys[i]
@@ -45,6 +57,18 @@ export default {
   removeFromCart: (giftId) => {
     return function (dispatch) {
       return removeGiftFromCart(dispatch, giftId)
+    }
+  },
+
+  showLoveExchangeView: () => {
+    return function (dispatch) {
+      return showLoveExchangeModal(dispatch)
+    }
+  },
+
+  hideLoveExchangeView: () => {
+    return function (dispatch) {
+      return hideLoveExchangeModal(dispatch)
     }
   },
 }
