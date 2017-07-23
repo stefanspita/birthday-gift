@@ -86,6 +86,7 @@ export default function reducer(state = initialState, action) {
     return R.merge(state, {
       budget: newBudget,
       love: state.love + 1,
+      availableGifts: markGiftsAsOffBudget(newBudget)(state.availableGifts),
     })
   }
 
@@ -96,6 +97,7 @@ export default function reducer(state = initialState, action) {
     return R.merge(state, {
       budget: newBudget,
       love: state.love - 1,
+      availableGifts: markGiftsAsOffBudget(newBudget)(state.availableGifts),
     })
   }
 
