@@ -4,6 +4,13 @@ import initialLove from "../../../data/initial-love"
 import {gifts as allAvailableGifts, categories} from "../../../data/initial-gifts"
 import consts from "../../../constants"
 
+// const totalLove = R.compose(R.sum, R.pluck("love"))(allAvailableGifts)
+// const totalPositiveLove = R.compose(R.sum, R.filter(R.lt(0)), R.pluck("love"))(allAvailableGifts)
+// const totalPeopleOverload = R.compose(R.sum, R.map(R.path(["cost", "peopleOverload"])))(allAvailableGifts)
+// const totalEnergy = R.compose(R.sum, R.map(R.path(["cost", "energy"])))(allAvailableGifts)
+// const totalMoney = R.compose(R.sum, R.map(R.path(["cost", "money"])))(allAvailableGifts)
+// console.log("!!!!!!!!!!!!!", totalLove, totalPositiveLove, totalPeopleOverload, totalEnergy, totalMoney)
+
 function calculateBudgetAfterSale (currency, state, gift) {
   return R.useWith(R.subtract, [R.path(["budget", currency]), R.path(["cost", currency])])(state, gift)
 }
