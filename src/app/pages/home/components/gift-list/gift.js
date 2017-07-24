@@ -14,7 +14,7 @@ export function Gift({id, cost, imageName, addToCart, outOfBudget}) {
       className={giftClass}
       onClick={() => addToCart(id)}
     >
-      <div>
+      <div className={styles.giftWrapper}>
         <img className={styles.giftImage} src={giftPictureSrc}></img>
       </div>
       <div>
