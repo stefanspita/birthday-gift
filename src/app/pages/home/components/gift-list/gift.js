@@ -6,7 +6,7 @@ import {getGiftPicture} from "./picture-chooser"
 
 export function Gift({id, cost, imageName, addToCart, outOfBudget}) {
   let giftClass = styles.wrapper
-  if (outOfBudget) giftClass = styles.disabledWrapper
+  if (outOfBudget) giftClass += ` ${styles.disabledWrapper}`
   const giftPictureSrc = getGiftPicture(imageName)
 
   return (

@@ -2,19 +2,16 @@
   padding: 1rem 0.5rem;
   width: 250px;
   border-radius: 5px;
+  cursor: pointer;
 
   &:hover {
     background-color: #ffd8cc;
-    cursor: pointer;
   }
 }
 
 .disabledWrapper {
   opacity: 0.5;
   cursor: not-allowed;
-  padding: 0.3rem;
-  width: 250px;
-  border-radius: 5px;
 }
 
 .giftImage {
