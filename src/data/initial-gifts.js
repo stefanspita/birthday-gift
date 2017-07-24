@@ -9,7 +9,7 @@ export const categories = [
 ]
 export const gifts = [
   {id: 1, name: "Cornwall", cost: {peopleOverload: 120, energy: 100, money: 200}, love: 80, imageName: "", categoryId: 1},
-  {id: 2, name: "Kingsbridge and Devon", cost: {peopleOverload: 50, energy: 100, money: 150}, love: 150, imageName: "", categoryId: 1},
+  {id: 2, name: "Kingsbridge and Devon", cost: {peopleOverload: 50, energy: 100, money: 150}, love: 150, imageName: "devon", categoryId: 1},
   {id: 3, name: "Indonesia trip to see elepharnts", cost: {peopleOverload: 300, energy: 400, money: 600}, love: 200, imageName: "", categoryId: 1},
   {id: 4, name: "Bruges weekend trip", cost: {peopleOverload: 200, energy: 200, money: 200}, love: 80, imageName: "", categoryId: 1},
   {id: 5, name: "Amsterdam weekend trip", cost: {peopleOverload: 250, energy: 200, money: 250}, love: 150, imageName: "", categoryId: 1},

@@ -2,11 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import {Currencies} from "../../../../components"
 import styles from "./gift.css"
-import giftPictureSrc from "./assets/gift-outline-md.png"
+import {getGiftPicture} from "./picture-chooser"
 
-export function Gift({id, cost, addToCart, outOfBudget}) {
+export function Gift({id, cost, imageName, addToCart, outOfBudget}) {
   let giftClass = styles.wrapper
   if (outOfBudget) giftClass = styles.disabledWrapper
+  const giftPictureSrc = getGiftPicture(imageName)
+
   return (
     <div
       className={giftClass}
@@ -29,6 +31,7 @@ export function Gift({id, cost, addToCart, outOfBudget}) {
 Gift.propTypes = {
   id: PropTypes.number.isRequired,
   cost: PropTypes.object.isRequired,
+  imageName: PropTypes.string.isRequired,
   outOfBudget: PropTypes.bool,
   addToCart: PropTypes.func.isRequired,
 }
