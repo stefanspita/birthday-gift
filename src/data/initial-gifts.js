@@ -1,8 +1,8 @@
 export const categories = [
   {id: 1, category: "Traveling together"},
   {id: 2, category: "Treating you right!"},
-  {id: 4, category: "Writing"},
   {id: 5, category: "The things I do for you"},
+  {id: 4, category: "Writing"},
   {id: 6, category: "Cooking for you"},
   {id: 3, category: "Having fun together"},
   {id: 7, category: "Getting more currency"},
@@ -22,12 +22,12 @@ export const gifts = [
   {id: 11, name: "A new car", cost: {peopleOverload: 0, energy: 300, money: 1500}, love: -300, imageName: "car", categoryId: 2},
   {id: 25, name: "Golden snitch fidget spinner", cost: {peopleOverload: 0, energy: 0, money: 3}, love: 0, imageName: "snitch", categoryId: 2},
 
+  {id: 19, name: "Full flat clean", cost: {peopleOverload: 0, energy: 50, money: 0}, love: -50, imageName: "clean", categoryId: 5},
+  {id: 20, name: "Make you tea without complaining for a week", cost: {peopleOverload: 0, energy: 30, money: 0}, love: -50, imageName: "tea", categoryId: 5},
+  {id: 21, name: "Get myself a new pillow", cost: {peopleOverload: 20, energy: 20, money: 20}, love: -20, imageName: "pillow", categoryId: 5},
+
   {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "writing", categoryId: 4},
   {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 30}, love: 150, imageName: "blog", categoryId: 4},
-
-  {id: 19, name: "Full flat clean", cost: {peopleOverload: 0, energy: 50, money: 0}, love: -50, imageName: "", categoryId: 5},
-  {id: 20, name: "Make you tea without complaining for a week", cost: {peopleOverload: 0, energy: 30, money: 0}, love: -50, imageName: "", categoryId: 5},
-  {id: 21, name: "Get myself a new pillow", cost: {peopleOverload: 20, energy: 20, money: 20}, love: -20, imageName: "", categoryId: 5},
 
   {id: 22, name: "Sarmale", cost: {peopleOverload: 0, energy: 50, money: 30}, love: -100, imageName: "", categoryId: 6},
   {id: 23, name: "Aubergine salad", cost: {peopleOverload: 0, energy: 15, money: 10}, love: 10, imageName: "", categoryId: 6},

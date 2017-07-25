@@ -12,6 +12,9 @@ import book from "./assets/book.png"
 import plant from "./assets/plant.png"
 import writing from "./assets/writing.png"
 import blog from "./assets/blog.png"
+import tea from "./assets/tea.png"
+import clean from "./assets/clean.png"
+import pillow from "./assets/pillow.png"
 
 const pictures = {
   devon,
@@ -27,6 +30,9 @@ const pictures = {
   plant,
   writing,
   blog,
+  tea,
+  clean,
+  pillow,
 }
 
 export function getGiftPicture(imageName) {
