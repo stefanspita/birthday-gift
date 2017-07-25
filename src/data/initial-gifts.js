@@ -22,8 +22,8 @@ export const gifts = [
   {id: 11, name: "A new car", cost: {peopleOverload: 0, energy: 300, money: 1500}, love: -300, imageName: "car", categoryId: 2},
   {id: 25, name: "Golden snitch fidget spinner", cost: {peopleOverload: 0, energy: 0, money: 3}, love: 0, imageName: "snitch", categoryId: 2},
 
-  {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "", categoryId: 4},
-  {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 30}, love: 150, imageName: "", categoryId: 4},
+  {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "writing", categoryId: 4},
+  {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 30}, love: 150, imageName: "blog", categoryId: 4},
 
   {id: 19, name: "Full flat clean", cost: {peopleOverload: 0, energy: 50, money: 0}, love: -50, imageName: "", categoryId: 5},
   {id: 20, name: "Make you tea without complaining for a week", cost: {peopleOverload: 0, energy: 30, money: 0}, love: -50, imageName: "", categoryId: 5},
