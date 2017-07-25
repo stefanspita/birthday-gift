@@ -43,7 +43,6 @@ export const gifts = [
 
   {id: 26, name: "Make me all the teas for a week", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 30, imageName: "", categoryId: 7},
   {id: 27, name: "Let me teach you how to defend in fifa", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 60, imageName: "", categoryId: 7},
-  {id: 28, name: "Play tennis with me", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 40, imageName: "", categoryId: 7},
-  {id: 29, name: "Wear my bristol city t-shirt when we go out on time", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 60, imageName: "", categoryId: 7},
-  {id: 31, name: "Learn to ski in Wales this winter", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 60, imageName: "", categoryId: 7},
+  {id: 28, name: "Wear my bristol city t-shirt when we go out one time", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 60, imageName: "", categoryId: 7},
+  {id: 29, name: "Learn to ski in Wales this winter", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 60, imageName: "", categoryId: 7},
 ]
