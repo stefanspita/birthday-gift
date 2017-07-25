@@ -64,6 +64,8 @@ export default {
       exclude: [
         "src/**/*.css",
         "src/**/*.png",
+        "src/**/*.jpg",
+        "src/**/*.svg",
       ],
     }),
     babel({
