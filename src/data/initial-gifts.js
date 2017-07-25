@@ -16,11 +16,11 @@ export const gifts = [
   {id: 6, name: "Berlin trip", cost: {peopleOverload: 250, energy: 200, money: 200}, love: 100, imageName: "berlin", categoryId: 1},
 
   {id: 7, name: "Giant handwarmer", cost: {peopleOverload: 0, energy: 0, money: 15}, love: 20, imageName: "", categoryId: 2},
-  {id: 8, name: "Any book you want", cost: {peopleOverload: 0, energy: 0, money: 10}, love: 0, imageName: "", categoryId: 2},
-  {id: 9, name: "Any house plant you want", cost: {peopleOverload: 0, energy: 0, money: 40}, love: 20, imageName: "", categoryId: 2},
-  {id: 10, name: "Laptop", cost: {peopleOverload: 0, energy: 0, money: 200}, love: -200, imageName: "", categoryId: 2},
-  {id: 11, name: "A new car", cost: {peopleOverload: 0, energy: 300, money: 1500}, love: -300, imageName: "", categoryId: 2},
-  {id: 25, name: "Golden snitch fidget spinner", cost: {peopleOverload: 0, energy: 0, money: 3}, love: 0, imageName: "", categoryId: 2},
+  {id: 8, name: "Any book you want", cost: {peopleOverload: 0, energy: 0, money: 10}, love: 0, imageName: "book", categoryId: 2},
+  {id: 9, name: "Any house plant you want", cost: {peopleOverload: 0, energy: 0, money: 40}, love: 20, imageName: "plant", categoryId: 2},
+  {id: 10, name: "Laptop", cost: {peopleOverload: 0, energy: 0, money: 200}, love: -200, imageName: "laptop", categoryId: 2},
+  {id: 11, name: "A new car", cost: {peopleOverload: 0, energy: 300, money: 1500}, love: -300, imageName: "car", categoryId: 2},
+  {id: 25, name: "Golden snitch fidget spinner", cost: {peopleOverload: 0, energy: 0, money: 3}, love: 0, imageName: "snitch", categoryId: 2},
 
   {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "", categoryId: 4},
   {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 30}, love: 150, imageName: "", categoryId: 4},
