@@ -35,8 +35,8 @@ export const gifts = [
   {id: 23, name: "Aubergine salad", cost: {peopleOverload: 0, energy: 15, money: 10}, love: 10, imageName: "aubergine", categoryId: 6},
   {id: 24, name: "Polenta", cost: {peopleOverload: 0, energy: 20, money: 30}, love: 0, imageName: "polenta", categoryId: 6},
 
-  {id: 12, name: "Kayaking in Forrest of Dean", cost: {peopleOverload: 20, energy: 100, money: 50}, love: 20, imageName: "kayaking", categoryId: 3},
-  {id: 13, name: "Bristol paddle boarding", cost: {peopleOverload: 100, energy: 70, money: 30}, love: 0, imageName: "paddleboarding", categoryId: 3},
+  {id: 12, name: "Kayaking in Forrest of Dean", cost: {peopleOverload: 20, energy: 50, money: 50}, love: 20, imageName: "kayaking", categoryId: 3},
+  {id: 13, name: "Bristol paddle boarding", cost: {peopleOverload: 50, energy: 30, money: 30}, love: 0, imageName: "paddleboarding", categoryId: 3},
   {id: 14, name: "Chew valley country farm", cost: {peopleOverload: 50, energy: 20, money: 30}, love: 100, imageName: "farm", categoryId: 3},
   {id: 15, name: "Couple's relaxing massage", cost: {peopleOverload: 30, energy: 0, money: 60}, love: 70, imageName: "couplemassage", categoryId: 3},
   {id: 16, name: "Go karting", cost: {peopleOverload: 30, energy: 50, money: 60}, love: -30, imageName: "karting", categoryId: 3},
