@@ -15,24 +15,13 @@ import blog from "./assets/blog.png"
 import tea from "./assets/tea.png"
 import clean from "./assets/clean.png"
 import pillow from "./assets/pillow.png"
+import sarmale from "./assets/sarmale.png"
+import polenta from "./assets/polenta.png"
+import aubergine from "./assets/aubergine.png"
 
 const pictures = {
-  devon,
-  brugges,
-  indonesia,
-  cornwall,
-  amsterdam,
-  berlin,
-  snitch,
-  car,
-  laptop,
-  book,
-  plant,
-  writing,
-  blog,
-  tea,
-  clean,
-  pillow,
+  devon, brugges, indonesia, cornwall, amsterdam, berlin, snitch, car, laptop, book, plant,
+  writing, blog, tea, clean, pillow, sarmale, polenta, aubergine,
 }
 
 export function getGiftPicture(imageName) {

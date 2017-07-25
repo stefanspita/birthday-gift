@@ -27,11 +27,11 @@ export const gifts = [
   {id: 21, name: "Get myself a new pillow", cost: {peopleOverload: 20, energy: 20, money: 20}, love: -20, imageName: "pillow", categoryId: 5},
 
   {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "writing", categoryId: 4},
-  {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 30}, love: 150, imageName: "blog", categoryId: 4},
+  {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 5}, love: 150, imageName: "blog", categoryId: 4},
 
-  {id: 22, name: "Sarmale", cost: {peopleOverload: 0, energy: 50, money: 30}, love: -100, imageName: "", categoryId: 6},
-  {id: 23, name: "Aubergine salad", cost: {peopleOverload: 0, energy: 15, money: 10}, love: 10, imageName: "", categoryId: 6},
-  {id: 24, name: "Polenta", cost: {peopleOverload: 0, energy: 20, money: 30}, love: 0, imageName: "", categoryId: 6},
+  {id: 22, name: "Sarmale", cost: {peopleOverload: 0, energy: 50, money: 30}, love: -100, imageName: "sarmale", categoryId: 6},
+  {id: 23, name: "Aubergine salad", cost: {peopleOverload: 0, energy: 15, money: 10}, love: 10, imageName: "aubergine", categoryId: 6},
+  {id: 24, name: "Polenta", cost: {peopleOverload: 0, energy: 20, money: 30}, love: 0, imageName: "polenta", categoryId: 6},
 
   {id: 12, name: "Kayaking in Forrest of Dean", cost: {peopleOverload: 20, energy: 100, money: 50}, love: 20, imageName: "", categoryId: 3},
   {id: 13, name: "Bristol paddle boarding", cost: {peopleOverload: 100, energy: 70, money: 30}, love: -30, imageName: "", categoryId: 3},
