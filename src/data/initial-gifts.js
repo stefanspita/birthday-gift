@@ -26,7 +26,7 @@ export const gifts = [
   {id: 19, name: "Full flat clean", cost: {peopleOverload: 0, energy: 50, money: 0}, love: -50, imageName: "clean", categoryId: 5},
   {id: 20, name: "Make you tea without complaining for a week", cost: {peopleOverload: 0, energy: 30, money: 0}, love: -50, imageName: "tea", categoryId: 5},
   {id: 21, name: "Get myself a new pillow", cost: {peopleOverload: 20, energy: 20, money: 20}, love: -20, imageName: "pillow", categoryId: 5},
-  {id: 21, name: "Foot massage", cost: {peopleOverload: 0, energy: 5, money: 0}, love: 10, imageName: "footmassage", categoryId: 5},
+  {id: 21, name: "Foot massage", cost: {peopleOverload: 0, energy: 5, money: 0}, love: -10, imageName: "footmassage", categoryId: 5},
 
   {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "writing", categoryId: 4},
   {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 5}, love: 150, imageName: "blog", categoryId: 4},
