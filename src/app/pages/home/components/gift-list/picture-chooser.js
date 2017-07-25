@@ -18,10 +18,18 @@ import pillow from "./assets/pillow.png"
 import sarmale from "./assets/sarmale.png"
 import polenta from "./assets/polenta.png"
 import aubergine from "./assets/aubergine.png"
+import couplemassage from "./assets/couplemassage.png"
+import farm from "./assets/farm.png"
+import footmassage from "./assets/footmassage.png"
+import karting from "./assets/karting.png"
+import kayaking from "./assets/kayaking.png"
+import paddleboarding from "./assets/paddleboarding.png"
+import skiing from "./assets/skiing.png"
 
 const pictures = {
   devon, brugges, indonesia, cornwall, amsterdam, berlin, snitch, car, laptop, book, plant,
-  writing, blog, tea, clean, pillow, sarmale, polenta, aubergine,
+  writing, blog, tea, clean, pillow, sarmale, polenta, aubergine, couplemassage, farm, footmassage,
+  karting, kayaking, paddleboarding, skiing,
 }
 
 export function getGiftPicture(imageName) {

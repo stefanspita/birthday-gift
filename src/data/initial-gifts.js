@@ -14,6 +14,7 @@ export const gifts = [
   {id: 4, name: "Brugges weekend trip", cost: {peopleOverload: 200, energy: 200, money: 200}, love: 80, imageName: "brugges", categoryId: 1},
   {id: 5, name: "Amsterdam weekend trip", cost: {peopleOverload: 250, energy: 200, money: 250}, love: 150, imageName: "amsterdam", categoryId: 1},
   {id: 6, name: "Berlin trip", cost: {peopleOverload: 250, energy: 200, money: 200}, love: 100, imageName: "berlin", categoryId: 1},
+  {id: 30, name: "Go skiing", cost: {peopleOverload: 200, energy: 300, money: 300}, love: 100, imageName: "skiing", categoryId: 1},
 
   {id: 7, name: "Giant handwarmer", cost: {peopleOverload: 0, energy: 0, money: 15}, love: 20, imageName: "", categoryId: 2},
   {id: 8, name: "Any book you want", cost: {peopleOverload: 0, energy: 0, money: 10}, love: 0, imageName: "book", categoryId: 2},
@@ -25,6 +26,7 @@ export const gifts = [
   {id: 19, name: "Full flat clean", cost: {peopleOverload: 0, energy: 50, money: 0}, love: -50, imageName: "clean", categoryId: 5},
   {id: 20, name: "Make you tea without complaining for a week", cost: {peopleOverload: 0, energy: 30, money: 0}, love: -50, imageName: "tea", categoryId: 5},
   {id: 21, name: "Get myself a new pillow", cost: {peopleOverload: 20, energy: 20, money: 20}, love: -20, imageName: "pillow", categoryId: 5},
+  {id: 21, name: "Foot massage", cost: {peopleOverload: 0, energy: 5, money: 0}, love: 10, imageName: "footmassage", categoryId: 5},
 
   {id: 17, name: "Creative writing course", cost: {peopleOverload: 0, energy: 0, money: 300}, love: 100, imageName: "writing", categoryId: 4},
   {id: 18, name: "Program a brand new blog for you, however you want it", cost: {peopleOverload: 0, energy: 400, money: 5}, love: 150, imageName: "blog", categoryId: 4},
@@ -33,11 +35,11 @@ export const gifts = [
   {id: 23, name: "Aubergine salad", cost: {peopleOverload: 0, energy: 15, money: 10}, love: 10, imageName: "aubergine", categoryId: 6},
   {id: 24, name: "Polenta", cost: {peopleOverload: 0, energy: 20, money: 30}, love: 0, imageName: "polenta", categoryId: 6},
 
-  {id: 12, name: "Kayaking in Forrest of Dean", cost: {peopleOverload: 20, energy: 100, money: 50}, love: 20, imageName: "", categoryId: 3},
-  {id: 13, name: "Bristol paddle boarding", cost: {peopleOverload: 100, energy: 70, money: 30}, love: -30, imageName: "", categoryId: 3},
-  {id: 14, name: "Chew valley country farm", cost: {peopleOverload: 50, energy: 20, money: 30}, love: 100, imageName: "", categoryId: 3},
-  {id: 15, name: "Couple's relaxing massage", cost: {peopleOverload: 30, energy: 0, money: 60}, love: 70, imageName: "", categoryId: 3},
-  {id: 16, name: "Go karting", cost: {peopleOverload: 30, energy: 50, money: 60}, love: -30, imageName: "", categoryId: 3},
+  {id: 12, name: "Kayaking in Forrest of Dean", cost: {peopleOverload: 20, energy: 100, money: 50}, love: 20, imageName: "kayaking", categoryId: 3},
+  {id: 13, name: "Bristol paddle boarding", cost: {peopleOverload: 100, energy: 70, money: 30}, love: -30, imageName: "paddleboarding", categoryId: 3},
+  {id: 14, name: "Chew valley country farm", cost: {peopleOverload: 50, energy: 20, money: 30}, love: 100, imageName: "farm", categoryId: 3},
+  {id: 15, name: "Couple's relaxing massage", cost: {peopleOverload: 30, energy: 0, money: 60}, love: 70, imageName: "couplemassage", categoryId: 3},
+  {id: 16, name: "Go karting", cost: {peopleOverload: 30, energy: 50, money: 60}, love: -30, imageName: "karting", categoryId: 3},
 
   {id: 26, name: "Make me all the teas for a week", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 30, imageName: "", categoryId: 7},
   {id: 27, name: "Let me teach you how to defend in fifa", cost: {peopleOverload: 0, energy: 0, money: 0}, love: 60, imageName: "", categoryId: 7},
