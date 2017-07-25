@@ -1,7 +1,7 @@
 import R from "ramda"
 
 function getInitialContent(lineBreak) {
-  return `Congratulations for completing this trial. I hope you found it tough to figure out what the secret gifts were.${lineBreak}Your combined knowledge of how my twisted brain works and what I'd like us to do together should have ${lineBreak}gotten you loads of the gifts you really wanted. Here's what you've half-blindly chosen:${lineBreak}`
+  return `Congratulations for completing this trial. I hope you found it tough to figure out what the secret gifts were.${lineBreak}My gift to you was this little game that lets you choose what you most want us to do together this year, while also trying to confuse what everything is.${lineBreak}I know you want us to do everything together. We'll probably do all of them in the next few years, but what you blindly choose now will go straight to my TODO list in the next minute or so.${lineBreak}I SWEAR I also have a copy of this gift list because I totally had the time to get that working today.${lineBreak}Here's what you've half-blindly chosen:${lineBreak}`
 }
 
 function getGiftCost(gift) {
